@@ -1,2 +1,6 @@
 # t11tasks
 A proof of concept regular (CRA) React applications for B1 Activity Tasks via SL
+I have made a nice progress with my other project with Meteor B1, but I wasn't completely convinced that Meteor is really the right way to start application development in 2019. Here are couple of points:
+Deploying Meteor is limited, it requires special support from the hosting provider. Firestore and firebase has realtime database solutions, too, that are readily available; but my applications mightn't really need real-time data handling. Running Meteor in test mode is really slow, likewise running Meteor and Flow is really slow. It was a joy to work with Meteor, and whenever I need its services, I wouldn't hesitate to jump back.
+This new project is about to login to a B1 system as an employee, list and create tasks, report them completed, and delete unwanted ones. I want to experiment with dynamic loading, which was so excellently supported on Android SDK, I wonder if React/Redux has similar toolset. This version is going to perform SAP B1 SL transactions directly from the browser. 
+I'll give a try to use React Context, and I'll experiment with implementing a multilanguage support, where the translation data is stored in Firestore database tables.
