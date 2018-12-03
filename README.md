@@ -13,6 +13,9 @@ I'll give a try to use React Context, and I'll experiment with implementing a mu
 <li>npm install flow-bin --save-dev
 <li>flow init
 <li>flow-typed install --libdefDir .flow-typed
+<li>npm install -g firebase-tools
+<li>firebase init
+<li>firebase deploy
 </ul>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
