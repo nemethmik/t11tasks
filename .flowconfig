@@ -1,0 +1,13 @@
+[ignore]
+
+[include]
+
+[libs]
+.flow-typed
+.app-flow-types
+
+[lints]
+
+[options]
+
+[strict]
