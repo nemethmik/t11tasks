@@ -16,7 +16,41 @@ I'll give a try to use React Context, and I'll experiment with implementing a mu
 <li>npm install -g firebase-tools
 <li>firebase init
 <li>firebase deploy
+
 </ul>
+
+## Materialize CSS vs Material Components for React (MDC React)
+I've spent quite a lot of time on Materialize CSS (npm install materialize-css). I have even bought the $20 admin template/theme package, but I had to realize that the nifty features are available via heavy JQuery programming. This is not a library for React. So eventually I decided to start working on Google's official https://github.com/material-components/material-components-web-react It is far less popular than the Material UI, and actually there are no examples at all, really challenging.
+The other component library I am thinking of are Material UI, which is really popular and a number of excellent examples are available. The other one is Reactstrap, which is Bootstrap 4 library. Creative Tim is selling excellent looking templates/themes for these libraries.
+
+## Goving a Try to MDC React
+The getting started guide starts with this: npm install @material/react-button, whch is really weird, no need to install the entire library, hmm.
+I followed the instructions and wanted to create an icon button, after I've added the link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" to the index.htm header:
+
+```
+import Button from "@material/react-button"
+import "@material/react-button/dist/button.min.css"
+...
+<Button raised className="button-alternate" icon="favorite"  
+onClick={() => console.log('clicked!')}>Click Me!</Button>
+```
+But it crashed. The only way I was able to create an icon button was when I combined scripst from 
+https://github.com/material-components/material-components-web/tree/master/packages/mdc-button
+
+```
+<Button raised className="button-alternate"
+onClick={() => console.log('clicked!')}>
+<i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
+Click Me!
+</Button>
+```
+
+I have even joined the https://discordapp.com/channels/259087343246508035/468946502623166485 community, but it didn't seem very promising.
+Then I've installed another two packages npm install @material/react-icon-button @material/react-material-icon
+Eventually, I gave up; it's hell very complex to use this MDC React library: for every component you have to explicitly (NPM) install and then import the compoenet as well as import explicitly the correspoding CSS file(s), too. I tried to make an Icon Toggle Button; I spent two hours, and found no information. Maybe MDC React is the best performing Material Design implementation for React, but because of the total lack of documentation, the non-existent community, no real examples, it's only for experimental projects where you have a hell lot of time to research. My goal is to find an easy to use MD library: so far materialize CSS and MDC React both failed.
+So, have silently uninstalled these MDC React packages: npm uninstall @material/react-icon-button @material/react-material-icon @material/react-button 
+I am really on the point of going back to Flutter: with the brilliantly typed language of Dart, it contained everything. For server side I've learned enough JavaScript to be able to implement practically any complex server side business logic including Firebase Functions. I don't really need desktop functionality. Anyhow, let me give a try to Material UI. 
+--------------
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
