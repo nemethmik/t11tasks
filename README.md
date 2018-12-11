@@ -1,4 +1,6 @@
-# t11tasks
+# t11tasks (On Hold)
+Working directly with Materialize CSS was quite cumbersome; it was designed for static pages. Material UI is the most popular MD framework for React, and it seems to be fine. Flow is lagging behind TypeScript, and is not relly integrated with React workflow. VS Code has brilliant built-in support for TypeScript. So, I'll redo this project on React/Redux/Material-UI/TypeScript/PWA.
+
 ## Motivation and Initial Ptoject Scope Deinition
 A proof of concept regular (CRA) React applications for B1 Activity Tasks via SL
 I have made a nice progress with my other project with Meteor B1, but I wasn't completely convinced that Meteor is really the right way to start application development in 2019. Here are couple of points:
