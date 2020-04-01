@@ -1,0 +1,24 @@
+@startuml SAP Business One - POEM Simple Data Intarface Architecture
+cloud {
+  node "windows server" {
+	  [B1 Data Interface Server] - b1dis_GET
+	  [B1 Data Interface Server] -u- b1dis_POST
+    [B1 Data Interface Server] -d-> [B1 Data Updater Process]
+    database "SAP B1 Company" as sapdb {
+      storage ToDosTable
+      storage UserQueries
+      storage "owor, wor1, rdr1" as so
+    }
+    [B1 Data Interface Server]->ToDosTable: write
+    [B1 Data Interface Server]<-UserQueries : read
+    [B1 Data Updater Process]<-d->ToDosTable : "read & update"
+    [B1 Data Updater Process] -d-> so : "SQL & DI API update"
+  }
+  
+}
+node POEM {
+  database pdb
+} 
+POEM .d.> b1dis_GET : "HTTP GET/JSON"
+POEM ..> b1dis_POST : "HTTP POST/JSON"
+@enduml
