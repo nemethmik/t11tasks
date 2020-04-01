@@ -14,3 +14,6 @@ Other comments and notes:
 - Similarly, I wanted typescript to give errors when using **non-boolean expressions** in ifs. I hate this implicit boolean conversion of javascript.
 - All type definitions had to be exported in types.ts, and all types had to be imported.
 
+In a second iteration
+- I have enabled PWA and I made a video about that [How to make and test the React Tic Tac Toe a PWA in 5 minutes?](https://www.youtube.com/watch?v=xOnoVHfTnSA)
+- I have deployed on firebase, too, watch [Deploying React Tic Tac Toe PWA on Firebase and Run Lighthouse](https://www.youtube.com/watch?v=GsT34At7MLQ)
